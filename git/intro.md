@@ -36,7 +36,7 @@ Tracked files, if updated or changed will be stated as modified. When we say mod
 
 **4. Staged**
 
-Changes or updates that are final and should be saved are set to staged state.
+Changes or updates that are final and should be saved-to-repo are set to staged state.
 
 ~~~
 git add MyClass.java //The file MyClass.java is now staged/ready for saving/commiting to the git ecosystem.
@@ -44,11 +44,13 @@ git add MyClass.java //The file MyClass.java is now staged/ready for saving/comm
 
 **5. Commited**
 
-Finalized changes or updates that needs to be saved are then commited.
+Finalized changes or updates that needs to be saved-to-repo are then commited.
 
 ~~~
 git commit -m "Added MyClass required for ......" //The staged file MyClass.java now has been saved in the git ecosystem
 ~~~
+
+_Since we now know about the git states, from now on **saved-to-repo == commited**._
 
 ### Repositories
 A repository in git is the collection of files of various different versions of a given project. It's actually the `.git` folder inside a project. This folder contains all the information about how the files have changed, all commit histories, versions, tags and branch details; basically everything.
