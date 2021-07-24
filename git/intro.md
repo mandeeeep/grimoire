@@ -24,7 +24,7 @@ Files that are part of a git ecosystem have following states:
 
 **1. Untracked / Ignored**
 
-These are files that will not be tracked by git, which essentially means they don't exist in the ecosystem. Concepts like `.gitignore` are used.
+These are files that will not be tracked by git, which essentially means they don't exist in the repo. Concepts like `.gitignore` are used.
 
 **2. Tracked**
 
@@ -32,7 +32,7 @@ These are files that wil be tracked by git.
 
 **3. Modified**
 
-Tracked files, if updated or changed will be stated as modified. When we say modified, we meant updated the codebase using any kind of editors and saving them. The file hasn't still been saved to git ecosystem yet.
+Tracked files, if updated or changed will be stated as modified. When we say modified, we meant updated the codebase using any kind of editors and saving them. The file hasn't still been saved to git repo yet.
 
 **4. Staged**
 
@@ -50,9 +50,14 @@ Finalized changes or updates that needs to be saved are then commited.
 git commit -m "Added MyClass required for ......" //The staged file MyClass.java now has been saved in the git ecosystem
 ~~~
 
-### Local
+### Repositories
+A repository in git is the collection of files of various different versions of a given project. It's actually the `.git` folder inside a project. This folder contains all the information about how the files have changed, all commit histories, versions, tags and branch details; basically everything.
 
-### Remote
+#### Local
+Local git repo is just the repo currently existing in your local computer. When you need to share your codebase and provide a more distributed access to the code base, we **add remote** like Github, Gitlab, Bitbucket or any self hosted VCS nodes.
+
+#### Remote
+Remote git repositories are more of a mirror of your current/local git repo existing on another computation node (server). Services like Github, Gitlab, Bitbucket or any self-hosted VCS allow us to mirror our local git repo to a cloud based node or any other external computational node. 
 
 ### Merge
 Git merge is a utility that allows you to merge branches in Git.
@@ -148,3 +153,16 @@ A ---> B ---> C ---> D ---> X ---> Y ---> Z [experiment-1, master]
 ~~~
 
 So, if you'd prefer keeping an exact historical record, you might go with merges, but if you prefer keeping an idealized and clean historical record, you might go with rebasing.
+
+To summarize use case of Rebase and Merge:
+
+**Use Rebase:**
+1. If you are the only person working with the repository. So, when on team and public repos if you really need to rebase, just make sure you fully understand how rebase works
+2. Need a more streamlined git history.
+3. You feel merge commits are unnecessary details that disturbs understanding of the git log.
+
+**Use Merge:**
+1. If working on public repos and teams.
+2. If you are confused about which one to use, it might be safe to stick with merge for now.
+3. For a more simpler and safer approach to integrating codebase.
+4. Git history needs to provide a more chronologically ordered log of commits.
