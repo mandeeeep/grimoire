@@ -14,7 +14,7 @@ First we will cover the basic concepts of Git.
 For lack of a git fiddle, this here is a very good interactive [tutorial](https://learngitbranching.js.org/).
 
 ### Branch
-Branches are just a refeGit merge is a command that allows you to merge branches from Git.rence to a snapshot of your code modifications. To put it simply, branch allows one to store all code commits/changes on a certain codebase or project and encapsulate/protect those changes without affecting the original piece of code.
+Branches are just a reference to a snapshot of your code modifications. To put it simply, branch allows one to store all code commits/changes on a certain codebase or project and encapsulate/protect those changes without affecting the original piece of code.
 
 ### Tag
 Tags are basically just references to specific commits in git history. Tags are mostly used to provide snapshots for a particular point in history of the codebase; or just call it **versions**. It is effectively an immutable branch that stores changes and history upto a particular point in time of the codebase's timeline. Unlike branches, new commits aren't accepted. 
